@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from APP1.views import empleadosData
+from APP1.views import userRegistrationView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('empleados/', empleadosData)
+]
+
+urlpatterns = [
+    path('admin/',admin.site.urls),
+    path('',userRegistrationView)
 ]
